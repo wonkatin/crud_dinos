@@ -2,16 +2,24 @@
 git init
 touch server.js .gitignore
 npm init -y 
+
 add node_modules to .gitignore
 put config/ to .gitignore
-
-sequelize init
-createdb
-edit config dialect & database delete username & PW and delete last two items in object
 
 //install
 npm i express
 npm i sequelize pg rowdy-logger
+
+//sequelize setup steps
+sequelize init
+createdb
+edit config dialect & database delete username & PW and delete last two items in object
+
+
+//sequelize models & migrate steps
+sequelize model:generate --name=dino --attributes name:string,type:string
+sequelize db:migrate
+
 
 
 CRUD    - Action        - HTTP verbs    - Endpoints
