@@ -13,9 +13,17 @@ const makeDino = async () => {
 const makeCreatures = async () => {
     models.creature.bulkCreate(data)
 }
-makeCreatures();
+// makeCreatures();
+
+const makeHabitat = async () => {
+    models.habitat.create({
+        name: "desert"
+    })
+}
+// makeHabitat()
 // try {
 // } 
 // catch (error) {
 //   console.log(error)
 // }
+

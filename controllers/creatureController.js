@@ -1,7 +1,6 @@
 const router = require('express').Router()
 const db = require('../models')
 
-module.exports = router;
 
 //CRUD routes for creatures
 
@@ -37,7 +36,7 @@ router.get('/', async (req, res) => {
         res.send(creatures)
     } 
     catch (error) {
-      console.log(error)
+        console.log(error)
     }
 })
 
@@ -67,3 +66,4 @@ router.delete('/:id', async (req, res) => {
         console.log(error)
     }
 })
+module.exports = router;

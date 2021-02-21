@@ -19,6 +19,7 @@ app.use(express.urlencoded({extended: false}))
 //Controllers
 app.use('/dinos', require('./controllers/dinoController'))
 app.use('/creatures', require('./controllers/creatureController'))
+app.use('/habitats', require('./controllers/habitatController'))
 
 
 //run nodemon cntrl c to exit
