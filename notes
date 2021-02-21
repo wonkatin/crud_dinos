@@ -20,6 +20,7 @@ edit config dialect & database delete username & PW and delete last two items in
 sequelize model:generate --name=dino --attributes name:string,type:string
 sequelize db:migrate
 
+sequelize model:generate --name=creature --attributes type:string,img_url:string
 
 
 CRUD    - Action        - HTTP verbs    - Endpoints

@@ -1,5 +1,5 @@
 const models = require('./models')
-
+const data = require('./prehistoric_creatures.json')
 
 
 const makeDino = async () => {
@@ -8,8 +8,12 @@ const makeDino = async () => {
         type: "Parasaurolophus"
     })
 }
-makeDino();
+// makeDino();
 
+const makeCreatures = async () => {
+    models.creature.bulkCreate(data)
+}
+makeCreatures();
 // try {
 // } 
 // catch (error) {
