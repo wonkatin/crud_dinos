@@ -1,26 +1,33 @@
 //setup 
-git init
-touch server.js .gitignore
-npm init -y 
+1 git init
+3 touch server.js .gitignore
+2 npm init -y 
 
-add node_modules to .gitignore
-put config/ to .gitignore
+4 add node_modules to .gitignore
+8 put config/ to .gitignore
 
 //install
-npm i express
-npm i sequelize pg rowdy-logger
+3 npm i express
+5 npm i sequelize pg rowdy-logger
 
 //sequelize setup steps
-sequelize init
-createdb
-edit config dialect & database delete username & PW and delete last two items in object
+6 sequelize init
+9 createdb
+7 edit config dialect "postgresql" & database delete username & PW and delete last two items in object
 
 
 //sequelize models & migrate steps
-sequelize model:generate --name=dino --attributes name:string,type:string
-sequelize db:migrate
+10 sequelize model:generate --name=dino --attributes name:string,type:string
+11 sequelize db:migrate
 
 sequelize model:generate --name=creature --attributes type:string,img_url:string
+
+for parent child relationship and foreign key
+sequelize migration:generate --name=add-habitatId-to-dinos 
+then edit the migration
+then sequelize db:migrate 
+
+
 
 
 CRUD    - Action        - HTTP verbs    - Endpoints
